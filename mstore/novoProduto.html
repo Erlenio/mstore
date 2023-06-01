@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Adicionar Produto</title>
+
+    <link rel="stylesheet" href="./css/newProduct.css" />
+
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+
+  </head>
+  <body>
+    <section>
+      <form action="" method="post" id="form" enctype="multipart/form-data">
+        <header>
+          <h2>Adicionar novo Produto</h2>
+
+          <div>
+            <button type="button">Cancelar</button>
+            <button type="button" class="add">Adicionar</button>
+          </div>
+        </header>
+
+        <fieldset>
+          <div class="left">
+            <div class="input-box cat">
+              <select name="categoria" id="categoria">
+                <option value="notbook">Notbooks</option>
+                <option value="desktop">Desktops</option>
+                <option value="camera">Cameras</option>
+                <option value="teclado">Teclados</option>
+                <option value="teclado">Mouse</option>
+                <option value="impressora">Impressoara</option>
+              </select>
+              <label for="categoria">Categoria</label>
+            </div>
+
+            <div class="input-box">
+              <input
+                type="text"
+                name="nome"
+                id="nome"
+                required
+                placeholder=" "
+              />
+              <label for="nome">Nome do Produto</label>
+            </div>
+
+            <div class="input-box">
+              <input
+                type="text"
+                name="marca"
+                id="marca"
+                required
+                placeholder=" "
+              />
+              <label for="marca">Marca</label>
+            </div>
+
+            <div class="input-box">
+              <input
+                type="text"
+                name="modelo"
+                id="modelo"
+                required
+                placeholder=" "
+              />
+              <label for="modelo">Modelo</label>
+            </div>
+
+            <div class="input-box">
+              <input
+                type="text"
+                name="preco"
+                id="preco"
+                required
+                placeholder=" "
+              />
+              <label for="preco">Preço</label>
+            </div>
+
+            <div class="input-box">
+              <input
+                type="text"
+                name="quantidade"
+                id="quantidade"
+                required
+                placeholder=" "
+              />
+              <label for="quantidade">Volume</label>
+            </div>
+
+            <div class="input-box">
+              <textarea
+                name="descricao"
+                id="descricao"
+                cols="30"
+                rows="10"
+                placeholder=" "
+                maxlength="200"
+              ></textarea>
+              <label for="descricao">Descrição</label>
+            </div>
+          </div>
+
+          <div class="right">
+            <div class="image-input">
+              <label for="imagem"
+                ><img src="./images/e-store.jpg" alt="" class="image-preview"
+              /></label>
+              <input type="file" name="imagem" id="imagem" accept="image/*" />
+            </div>
+
+            <h3>Especificações</h3>
+
+            <div class="especificacoes-box">
+              <div class="input-box">
+                <input
+                  type="text"
+                  name="chave"
+                  id="chave"
+                  required
+                  placeholder=" "
+                />
+                <label for="chave">Chave</label>
+              </div>
+
+              <div class="input-box">
+                <input
+                  type="text"
+                  name="valor"
+                  id="valor"
+                  required
+                  placeholder=" "
+                />
+                <label for="valor">Valor</label>
+              </div>
+
+              <button type="button" class="new_specification">
+                <i class="bx bx-plus"></i>
+              </button>
+            </div>
+
+            <div class="input-box">
+              <textarea
+                class="especificacoes"
+                readonly
+                placeholder=" "
+                id="especificacoes"
+                name="especificacoes"
+              >
+              </textarea>
+            </div>
+          </div>
+        </fieldset>
+      </form>
+    </section>
+
+    <script src="./js/jquery.js"></script>
+    <script>
+
+      let imageInput = document.querySelector("#imagem");
+      let preview = document.querySelector(".image-preview");
+
+      let m_url = "default";
+
+      //Upload image
+      imageInput.addEventListener("change", () => {
+        const reader = new FileReader();
+        reader.addEventListener("load", () => {
+          m_url = reader.result;
+          preview.src = m_url;
+          console.log(imageInput.value);
+        });
+        reader.readAsDataURL(imageInput.files[0]);
+        if (m_url != "default") {
+          // document.querySelector('.alt').style.display = 'none';
+        }
+      });
+
+      let especificacoes = []
+
+      $(".new_specification").click(() => {
+
+        if ($("#chave").val().trim != "" && $("#valor").val().trim() != "") {
+          if ($(".especificacoes").val().trim() == "") {
+            let valor = $("#valor").val();
+            let chave = $("#chave").val()
+            $(".especificacoes").val($("#chave").val() + ": " + $("#valor").val());
+            especificacoes.push({
+              chave : valor
+            });
+            $("#chave").val("");
+            $("#valor").val("");
+          } else {
+            let valor = $("#valor").val();
+            let chave = $("#chave").val()
+            $(".especificacoes").val(
+                $(".especificacoes").val() + ", \n" + $("#chave").val() + ": " + $("#valor").val());
+
+                especificacoes.push({
+              chave : valor
+            });
+          }
+        }
+      });
+
+      $(".add").click(() => {
+
+        if (
+          $('#categoria').val().trim() == "" ||
+          $("#nome").val().trim() == "" ||
+          $("#marca").val().trim() == "" ||
+          $("#modelo").val().trim() == "" ||
+          $("#preco").val().trim() == "" ||
+          $("#quantidade").val().trim() == "" ||
+          $("#descricao").val().trim() == "" ||
+          $("#especificacoes").val().trim() == ""
+        ) {
+          alert("Todos os campos devem ser preenchidos");
+        } else {
+          var form = document.querySelector('form');
+          // Capturar os dados do formulário
+          var formData = new FormData(form);
+          formData.append('request_type', 'write');
+          
+          $.ajax({
+            type: "POST",
+            url: "./php/produto.php", // Arquivo PHP para processar os dados
+            data: formData,
+            processData: false,
+        contentType: false,
+            success: function (response) {
+              if(response == 'sucesso'){
+                window.history.back();
+              }
+            },
+          });
+        }
+      });
+    </script>
+  </body>
+</html>

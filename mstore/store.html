@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Document</title>
+
+  <link rel="stylesheet" href="./css/style.css" />
+
+  <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet" />
+</head>
+
+<body>
+
+
+  
+
+  <header class="store">
+    <div class="wrapper">
+      <div id="icon" class="logo">E-Store</div>
+
+      <nav>
+        <i class="bx bx-cart nav_item"></i>
+        <div class="nav-item user">
+          <i class="bx bx-user nav_item"></i>
+          <div class="user-details">
+            <div class="loged">
+              <i class="bx bx-pencil" id="edit-user"></i>
+              <div class="user-header">
+                <img src="./images/camera.jpg" alt="" srcset="" />
+              </div>
+              <div class="user-body">
+                <div class="username">Nome do usuario</div>
+                <div class="email">Email</div>
+              </div>
+              <button class="logout">
+                <i class="bx bx-log-out"></i> <span>Sair</span>
+              </button>
+            </div>
+            <div class="unloged">
+              <a href="login.html">Logar</a>
+            </div>
+          </div>
+        </div>
+        <i class="bx bx-menu nav_item"></i>
+      </nav>
+
+      <ul class="menu">
+        <li>
+          <a href="index.html">Inicio</a>
+        </li>
+        <li>
+          <a href="store.html">Loja</a>
+        </li>
+        <li>
+          <a href="user.html">Perfil</a>
+        </li>
+        <li class="dashboard-link">
+          <a href="./admin/index.html">Dashboard</a>
+        </li>
+      </ul>
+    </div>
+  </header>
+
+  <section class="products-container" id="store">
+    <div class="filter-container">
+      <label for=""><i class="bx bx-filter"></i></label>
+      <select name="" id="">
+        <option value="todos">Todos Acessorios</option>
+        <option value="notbook">Laptops</option>
+        <option value="desktop">Desktops</option>
+        <option value="consola">Consolas de Jogos</option>
+        <option value="camera">Cameras</option>
+      </select>
+    </div>
+
+    <div class="product-wrapper">
+
+    <!--
+    <div class="product-box">
+      <div class="box-header">
+        <img src="./images/desktop.jpg" alt="" class="image" />
+
+        <div class="colors">
+          <span style="background: aliceblue"></span>
+          <span style="background: rgb(13, 78, 136)"></span>
+          <span style="background: rgb(32, 202, 146)"></span>
+        </div>
+      </div>
+
+      <div class="box-body">
+        <div class="views">
+          <img src="./images/camera.jpg" alt="" />
+          <img src="./images/camera.jpg" alt="" />
+          <img src="./images/camera.jpg" alt="" />
+        </div>
+
+        <h3>HP Omnium</h3>
+
+        <p class="price">30,050.49 Mzn</p>
+
+        <span>Ano lançamento: 2023</span> <br />
+        <span>Processador: Intel I7 11ª Geração</span>
+      </div>
+    </div>-->
+    </div>
+
+
+  </section>
+
+  <div class="cart">
+    <div class="cart-wrapper">
+      <div class="header">
+        <i class="bx bx-left-arrow-alt"></i>
+  
+        <span>Meu Carrinho</span>
+      </div>
+      <div class="cart-body">
+        <div class="cart-item">
+          <div class="item-header">
+            <img src="./images/produtos/01143578.jpg" alt="">
+          </div>
+          <div class="item-body">
+            <div class="item-name">Canon EOS 6D</div>
+            <div class="item-price">45000.00 Mzn</div>
+            <div class="item-quantity">
+              <input type="number" value="1" min="1" max="10"> <span>PCS</span>
+            </div>
+          </div>
+          <input type="checkbox">
+        </div>
+
+        <div class="cart-item">
+          <div class="item-header">
+            <img src="./images/produtos/01143245.jpg" alt="">
+          </div>
+          <div class="item-body">
+            <div class="item-name">Canon EOS 6D</div>
+            <div class="item-price">45000.00 Mzn</div>
+            <div class="item-quantity">
+              <input type="number" value="1" min="1" max="10"> <span>PCS</span>
+            </div>
+          </div>
+          <input type="checkbox">
+        </div>
+      </div>
+
+      <div class="cart-footer">
+        <div class="info">
+          <span class="t01">Total:</span>
+          <span class="total">246000 Mzn</span>
+        </div>
+        <button class="request-payment">Check Out</button>
+      </div>
+  
+      <div class="empty-cart">
+        <i class="bx bx-cart"></i>
+          <h3>O seu Carrinho está vazio</h3>
+      </div>
+    </div>
+  </div>
+  <footer>
+
+    <div class="footer-wrap">
+      <div class="box box-001">
+
+        <h2 class="logo">
+          E-Store
+        </h2>
+
+        <P>Qualidade e Segurança</P>
+
+        <h2>Fique a par de todas as novidades</h2>
+
+        <form action="">
+          <div class="input-box">
+            <input type="text" name="mail" id="mail" class="news-input" placeholder=" " required>
+            <label for="mail">e-mail</label>
+          </div>
+          <input type="submit" value="Inscrever-se">
+        </form>
+
+      </div>
+
+      <div class="box">
+
+        <h3>
+          Conecte-se a Nós
+        </h3>
+
+        <ul>
+          <li>
+            <a href="#"><i class="bx bxl-facebook"></i>Facebook</a>
+          </li>
+          <li>
+            <a href="#"><i class="bx bxl-instagram"></i>Instagram</a>
+          </li>
+          <li>
+            <a href="#"><i class="bx bxl-twitter"></i>Twitter</a>
+          </li>
+        </ul>
+
+      </div>
+
+      <div class="box">
+
+        <h3>
+          Ligações Rápidas
+        </h3>
+
+        <ul>
+          <li>
+            <a href="#">Home</a>
+          </li>
+          <li>
+            <a href="#">Loja</a>
+          </li>
+          <li>
+            <a href="#">FAQ</a>
+          </li>
+        </ul>
+
+      </div>
+    </div>
+
+    <p class="copyright">&COPY; 2023 <span style="font-family: Nosifer, sans-serif;">e-store</span></p>
+
+  </footer>
+
+  <script src="./js/jquery.js"></script>
+  <script src="./js/store.js"></script>
+</body>
+
+</html>

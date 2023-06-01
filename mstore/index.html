@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Home</title>
+
+    <link rel="stylesheet" href="./css/style.css" />
+
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+
+    <header class="store">
+      <div class="wrapper">
+        <div id="icon" class="logo">E-Store</div>
+
+        <nav>
+          <i class="bx bx-cart nav_item"></i>
+          <div class="nav-item user">
+            <i class="bx bx-user nav_item"></i>
+            <div class="user-details">
+              <div class="loged">
+                <i class="bx bx-pencil" id="edit-user"></i>
+                <div class="user-header">
+                  <img src="./images/camera.jpg" alt="" srcset="" />
+                </div>
+                <div class="user-body">
+                  <div class="username">Nome do usuario</div>
+                  <div class="email">Email</div>
+                </div>
+                <button class="logout">
+                  <i class="bx bx-log-out"></i> <span>Sair</span>
+                </button>
+              </div>
+              <div class="unloged">
+                <a href="login.html">Logar</a>
+              </div>
+            </div>
+          </div>
+          <i class="bx bx-menu nav_item"></i>
+        </nav>
+
+        <ul class="menu">
+          <li>
+            <a href="index.html">Inicio</a>
+          </li>
+          <li>
+            <a href="store.html">Loja</a>
+          </li>
+          <li>
+            <a href="user.html">Perfil</a>
+          </li>
+          <li class="dashboard-link">
+            <a href="./admin/index.html">Dashboard</a>
+          </li>
+        </ul>
+      </div>
+    </header>
+
+    <section id="header">
+      <div>
+        <h2>
+          Aqui Você Encontra Todo Tipo de Material Informatico e de Qualidade
+        </h2>
+
+        <a href="#">Ver Acessorios</a>
+      </div>
+    </section>
+
+    <section id="about">
+      <h2 class="title">Quem somos</h2>
+
+      <p>
+        Bem-vindo à [Nome da sua Empresa], sua fonte confiável de acessórios
+        informáticos em Manhiça! Com uma sólida presença no mercado há 5 anos,
+        nos dedicamos a fornecer produtos e serviços de excelência para atender
+        às necessidades dos nossos clientes.
+      </p>
+
+      <br />
+
+      <p>
+        Na [Nome da sua Empresa], entendemos a importância dos acessórios
+        informáticos de qualidade para otimizar a sua experiência com a
+        tecnologia. Nosso objetivo é oferecer uma ampla variedade de acessórios
+        de alta qualidade, garantindo que você encontre exatamente o que precisa
+        para melhorar a sua produtividade, eficiência e entretenimento.
+      </p>
+
+      <br />
+
+      <p>
+        Na [Nome da sua Empresa], nos orgulhamos de estabelecer relacionamentos
+        sólidos com nossos clientes. Valorizamos a confiança que você deposita
+        em nós, e é por isso que nos esforçamos para oferecer um atendimento
+        excepcional e suporte dedicado em todas as etapas da sua jornada
+        conosco. Queremos que você se sinta satisfeito e confiante em sua
+        escolha ao optar pelos nossos serviços.
+      </p>
+    </section>
+
+    <section class="products">
+      <h2>Nossos Produtos</h2>
+
+      <div class="box-container">
+        <div class="box">
+          <img src="./images/laptop.jpg" alt="" />
+
+          <h3><a href="#"><span>Notbooks</span> <i class='bx bx-chevron-right'></i></a> </h3>
+        </div>
+
+        <div class="box">
+          <img src="./images/keyboard.jpg" alt="" />
+
+          <h3><a href="#"><span>Monitores</span> <i class='bx bx-chevron-right'></i></a> </h3>
+        </div>
+
+        <div class="box">
+          <img src="./images/desktop.jpg" alt="" />
+
+          <h3><a href="#"><span>Desktops</span> <i class='bx bx-chevron-right'></i></a> </h3>
+        </div>
+
+        <div class="box">
+          <img src="./images/laptop.jpg" alt="" />
+
+          <h3><a href="#"><span>Monitores</span> <i class='bx bx-chevron-right'></i></a> </h3>
+        </div>
+
+        <div class="box">
+          <img src="./images/consolas.jpg" alt="" />
+
+          <h3><a href="#"><span>Consolas</span> <i class='bx bx-chevron-right'></i></a> </h3>
+        </div>
+
+        <div class="box">
+          <img src="./images/camera.jpg" alt="" />
+
+          <h3><a href="#"><span>Cameras</span> <i class='bx bx-chevron-right'></i></a> </h3>
+        </div>
+      </div>
+    </section>
+
+    <div class="cart">
+      <div class="header">
+        <i class="bx bx-left-arrow-alt"></i>
+
+        <span>Minha Loja</span>
+      </div>
+    </div>
+
+    <section></section>
+
+    <footer>
+      <div class="footer-wrap">
+        <div class="box box-001">
+          <h2 class="logo">E-Store</h2>
+
+          <p>Qualidade e Segurança</p>
+
+          <h2>Fique a par de todas as novidades</h2>
+
+          <form action="">
+            <div class="input-box">
+              <input
+                type="text"
+                name="mail"
+                id="mail"
+                class="news-input"
+                placeholder=" "
+                required
+              />
+              <label for="mail">e-mail</label>
+            </div>
+            <input type="submit" value="Inscrever-se" />
+          </form>
+        </div>
+
+        <div class="box">
+          <h3>Conecte-se a Nós</h3>
+
+          <ul>
+            <li>
+              <a href="#"><i class="bx bxl-facebook"></i>Facebook</a>
+            </li>
+            <li>
+              <a href="#"><i class="bx bxl-instagram"></i>Instagram</a>
+            </li>
+            <li>
+              <a href="#"><i class="bx bxl-twitter"></i>Twitter</a>
+            </li>
+          </ul>
+        </div>
+
+        <div class="box">
+          <h3>Ligações Rápidas</h3>
+
+          <ul>
+            <li>
+              <a href="#">Home</a>
+            </li>
+            <li>
+              <a href="store.html">Loja</a>
+            </li>
+            <li>
+              <a href="#">FAQ</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <p class="copyright">&COPY; 2023 e-store</p>
+    </footer>
+
+    <script src="./js/jquery.js"></script>
+    <script src="./js/script.js"></script>
+  </body>
+</html>

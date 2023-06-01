@@ -1,0 +1,18 @@
+<input type="file" name="" id="file">
+
+<script>
+    let m_url;
+    let imageInput = document.querySelector('input');
+    document.querySelector('input').onchange = () =>{
+        const reader = new FileReader();
+        reader.addEventListener("load", () => {
+          m_url = reader.result;
+          document.write(imageInput.value);
+          console.log(imageInput.value);
+        });
+        reader.readAsDataURL(imageInput.files[0]);
+        if (m_url != "default") {
+          // document.querySelector('.alt').style.display = 'none';
+        }
+    }
+</script>

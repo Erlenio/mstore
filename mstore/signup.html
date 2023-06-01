@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sigin up - E-Store</title>
+
+    <link rel="stylesheet" href="./css/login.css">
+
+</head>
+
+<body>
+
+    <form action="#" method="post">
+
+        <h2>Nova Conta</h2>
+
+        <div class="input-box">
+            <input type="text" name="name" id="name" placeholder=" " required>
+            <label for="name">Nome do usuário</label>
+        </div>
+
+        <div class="input-box">
+            <input type="email" name="email" id="email" placeholder=" " required>
+            <label for="email">e-mail</label>
+        </div>
+
+        <div class="input-box">
+            <input type="password" name="password" id="password" placeholder=" " required>
+            <label for="password">Senha</label>
+        </div>
+
+        <button type="button">Registar-se</button>
+
+        <div class="navigation">
+            <a href="signup.html">Tenho uma conta</a> | <a href="#">Esqueci a Senha</a>
+        </div>
+
+    </form>
+
+    <script src="./js/jquery.js"></script>
+    <script>
+
+        $(document).ready(() =>{
+            let form = $('form');
+            $('button').click(() =>{
+                
+               if($('#email').val().trim() != '' && $('#name').val().trim() != '' && $('#password').val().trim() != ''){
+                    $.ajax({
+                        type: 'POST',
+                        url: './php/authication.php',
+                        data: {'request_type': 'signup', 'email': $('#email').val(), 'password': $('#password').val(), 'username': $('#name').val()},
+                        success: (response) =>{
+                            if(response == 'sucesso'){
+                                document.location.replace('store.html');
+                            }else{
+                                alert(response);
+                            }
+                        }
+                    });
+               }
+
+            });
+
+        });
+    </script>
+
+</body>
+
+</html>

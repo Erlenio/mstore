@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Produtos</title>
+
+    <link rel="stylesheet" href="./css/products.css" />
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/loader.css">
+
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+
+  </head>
+  <body>
+
+    <header class="store">
+      <div class="wrapper">
+        <div id="icon" class="logo">E-Store</div>
+  
+        <nav>
+          <i class="bx bx-cart nav_item"></i>
+          <div class="nav-item user">
+            <i class="bx bx-user nav_item"></i>
+            <div class="user-details">
+              <div class="loged">
+                <i class="bx bx-pencil" id="edit-user"></i>
+                <div class="user-header">
+                  <img src="./images/camera.jpg" alt="" srcset="" />
+                </div>
+                <div class="user-body">
+                  <div class="username">Nome do usuario</div>
+                  <div class="email">Email</div>
+                </div>
+                <button class="logout">
+                  <i class="bx bx-log-out"></i> <span>Sair</span>
+                </button>
+              </div>
+              <div class="unloged">
+                <a href="login.html">Logar</a>
+              </div>
+            </div>
+          </div>
+          <i class="bx bx-menu nav_item"></i>
+        </nav>
+  
+        <ul class="menu">
+          <li>
+            <a href="index.html">Inicio</a>
+          </li>
+          <li>
+            <a href="store.html">Loja</a>
+          </li>
+          <li>
+            <a href="user.html">Perfil</a>
+          </li>
+          <li class="dashboard-link">
+            <a href="./admin/index.html">Dashboard</a>
+          </li>
+        </ul>
+      </div>
+    </header>
+
+    <section class="products">
+
+      <div class="nav">
+
+        <div>
+          <label for="filter">Ordenar Por</label>
+          <select name="filter" id="filter">
+            <option value="data_adicao">Data</option>
+            <option value="preco">Preço</option>
+            <option value="quantidade">Quantidade</option>
+            <option value="marca">Marca</option>
+            <option value="categoria">Categoria</option>
+          </select>
+          <i class="bx bx-down-arrow-alt"></i>
+        </div>
+  
+        <a href="./novoProduto.html"><i class="bx bx-plus"></i> Adicionar</a>
+  
+      </div>
+
+      <table>
+        <thead>
+          <tr>
+            <th class="image"></th>
+            <th>Categoria</th>
+            <th>Nome</th>
+            <th>Preco</th>
+            <th>Modelo</th>
+            <th>Marca</th>
+            <th>Quantidade</th>
+          </tr>
+        </thead>
+  
+        <tbody>
+  
+        </tbody>
+  
+      </table>
+    </section>
+
+    
+
+    <form action="" method="post" id="form" enctype="multipart/form-data">
+
+      
+
+      <div class="wrapper">
+        <div class="form-header">
+          <h2><label for="id">Produto: </label><input type="text" readonly value="10839" id="id" name="id"></h2>
+          <div class="buttons">
+            <button type="button" class="close-form">Fechar</button>
+            <button type="button" class="edit">Editar</button>
+          </div>
+        </div>
+        <fieldset>
+          <div class="left">
+            <div class="input-box cat">
+              <select name="categoria" id="categoria"readonly>
+                <option value="notbook">Notbooks</option>
+                <option value="desktop">Desktops</option>
+                <option value="camera">Cameras</option>
+                <option value="teclado">Teclados</option>
+                <option value="teclado">Mouse</option>
+                <option value="impressora">Impressoara</option>
+              </select>
+              <label for="categoria">Categoria</label>
+            </div>
+  
+            <div class="input-box">
+              <input
+                type="text"
+                name="nome"
+                id="nome"
+                required
+                placeholder=" "
+              readonly/>
+              <label for="nome">Nome do Produto</label>
+            </div>
+  
+            <div class="input-box">
+              <input
+                type="text"
+                name="marca"
+                id="marca"
+                required
+                placeholder=" "
+              readonly/>
+              <label for="marca">Marca</label>
+            </div>
+  
+            <div class="input-box">
+              <input
+                type="text"
+                name="modelo"
+                id="modelo"
+                required
+                placeholder=" "
+              readonly/>
+              <label for="modelo">Modelo</label>
+            </div>
+  
+            <div class="input-box">
+              <input
+                type="text"
+                name="preco"
+                id="preco"
+                required
+                placeholder=" "
+              readonly/>
+              <label for="preco">Preço</label>
+            </div>
+  
+            <div class="input-box">
+              <input
+                type="text"
+                name="quantidade"
+                id="quantidade"
+                required
+                placeholder=" "
+              readonly/>
+              <label for="quantidade">Volume</label>
+            </div>
+  
+            <div class="input-box">
+              <textarea
+                name="descricao"
+                id="descricao"
+                cols="30"
+                rows="10"
+                placeholder=" "
+                maxlength="200"
+              readonly></textarea>
+              <label for="descricao">Descrição</label>
+            </div>
+          </div>
+  
+          <div class="right">
+            <div class="image-input">
+              <label for="imagem"
+                ><img src="./images/e-store.jpg" alt="" class="image-preview"
+              /></label>
+              <input type="file" name="imagem" id="imagem" accept="image/*" readonly />
+            </div>
+  
+            <h3>Especificações</h3>
+  
+            <div class="especificacoes-box">
+              <div class="input-box">
+                <input
+                  type="text"
+                  name="chave"
+                  id="chave"
+                  required
+                  placeholder=" "
+                />
+                <label for="chave">Chave</label>
+              </div>
+  
+              <div class="input-box">
+                <input
+                  type="text"
+                  name="valor"
+                  id="valor"
+                  required
+                  placeholder=" "
+                />
+                <label for="valor">Valor</label>
+              </div>
+  
+              <button type="button" class="new_specification">
+                <i class="bx bx-plus"></i>
+              </button>
+            </div>
+  
+            <div class="input-box">
+              <textarea
+                class="especificacoes"
+                readonly
+                placeholder=" "
+                id="especificacoes"
+                name="especificacoes"
+              >
+              </textarea>
+            </div>
+          </div>
+        </fieldset>
+      </div>
+
+
+    </form>
+    
+    <script src="./js/jquery.js"></script>
+    <script src="./js/product.js"></script>
+
+  </body>
+</html>

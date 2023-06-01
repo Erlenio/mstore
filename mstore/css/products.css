@@ -1,0 +1,240 @@
+table{
+    width: 100%;
+    border-collapse: collapse;
+}
+
+table td,
+table th{
+    border: 1px solid #6666;
+    text-align: center;
+    color: #666;
+}
+
+table th{
+    color: #F6F5FF;
+    border-color: #F6F5FF;
+}
+
+i#top{
+    transform: rotate(-180deg);
+}
+
+table .image{
+    width: 100px;
+    height: 100px;
+}
+
+table thead tr{
+    background: rgb(115, 137, 153);
+}
+
+form{
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    z-index: 5;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(0,0,0,0.05);
+}
+
+form .wrapper{
+    background: #fff;
+    box-shadow: 0 0 .3rem .3rem rgba(0,0,0,0.05);
+    padding: 20px 40px;
+    border-radius: 6px;
+}
+
+form .wrapper .form-header{
+    width: 100%;
+    border-bottom: 1px solid #6666;
+    margin-bottom: 30px;
+    padding-bottom: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+form .wrapper .form-header button{
+    background: #F6F5FF;
+    padding: 8px 15px;
+    display: inline-block;
+    color: #666;
+    border-radius: 4px;
+    border: 1px solid #eee;
+    font-size: 16px;
+    cursor: pointer;
+
+}
+
+form .wrapper .especificacoes-box{
+    visibility: hidden;
+}
+
+form .wrapper .form-header h2{
+    font-weight: bolder;
+    font-size: 2rem;
+    color: #666;
+}
+
+form .wrapper .form-header h2 input#id{
+    font-size: 2rem;
+    color: #bab9c2;
+}
+
+form fieldset{
+    border: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.left{
+    border-right: 1px solid #6666;
+    padding-right: 40px;
+}
+
+.right{
+    padding-left: 40px;
+}
+
+.input-box{
+    position: relative;
+    margin-bottom: 20px;
+    width: 100%;
+    min-width: 320px;
+    display: flex;
+}
+
+textarea{width: 100%; border: 1px solid #eee; margin-top: 15px; resize: none; height: 150px;}
+
+.input-box input,
+.input-box select,
+.input-box textarea,
+textarea{
+    width: 100%;
+    border: 1px solid #6666;
+    padding: 12px 8px;
+    font-size: 16px;
+    color: #666666;
+    display: inline-block;
+}
+
+.input-box select{
+    border-color: #29e;
+}
+
+.input-box input:focus,
+.input-box textarea:focus{
+    border-color: #29e;
+    box-shadow: 0 0 .3rem .3rem rgba(0,0,0,0.07);
+}
+
+.input-box label{
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 8px;
+    padding: 0 5px;
+    cursor: text;
+    color: #6666;
+}
+
+.especificacoes-box{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    gap: 10px;
+}
+
+.especificacoes-box button{
+    padding: 12px;
+    background: #29e;
+    color: #fff;
+    border: 1px solid;
+    cursor: pointer;
+    display: inline-block;
+}
+
+.especificacoes-box .input-box{
+    width: 100%;
+    margin-bottom: 0
+}
+
+select{
+    border: 1px solid #29e;
+    padding: 8px ;
+}
+
+.input-box input:not(input:placeholder-shown) {border-color: #29e;}
+.input-box textarea:not(textarea:placeholder-shown) {border-color: #29e;}
+
+.input-box input:not(input:placeholder-shown) ~ label,
+.input-box.cat select ~ label,
+.input-box textarea:not(textarea:placeholder-shown) ~ label{
+    color: #29e;
+    top: 0;
+    background: #fff;
+}
+
+.image-input label{
+    margin-bottom: 20px;
+    width: 250px;
+    height: 200px;
+    display: flex;
+    position: relative;
+    margin: auto;
+    align-items: center;
+    justify-content: center;
+    border: 2px dashed #666666;
+}
+
+.image-input label img.image-preview{
+
+    width: 100%;
+    height: 100%;
+
+}
+
+h3{
+    margin-bottom: 20px;
+}
+
+.image-input label{
+    cursor: pointer;
+}
+
+input[type="file"]{
+    display: none;
+}
+
+.nav{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 5px 8px;
+    margin-bottom: 10px;
+}
+
+.nav a{
+    border-radius: 6px;
+    background: #29e;
+    color: #F6F5FF;
+    font-weight: bold;
+    font-size: 16px;
+    cursor: pointer;
+    padding: 8px 15px;
+}
+
+.bx-down-arrow-alt{
+    color: #29e;
+}
+
+.nav select{
+    border: 1px solid #29e;
+    color: #29e;
+}

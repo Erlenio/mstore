@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <link rel="stylesheet" href="./css/style.css" />
+
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <header>
+      <div class="wrapper">
+        <div id="icon" class="logo">E-Store</div>
+
+        <nav>
+          <i class="bx bx-cart nav_item"></i>
+          <div class="nav-item user">
+            <i class="bx bx-user nav_item"></i>
+            <div class="user-details">
+              <div class="loged">
+                <i class="bx bx-pencil" id="edit-user"></i>
+                <div class="user-header">
+                  <img src="./images/camera.jpg" alt="" srcset="" />
+                </div>
+                <div class="user-body">
+                  <div class="username">Nome do usuario</div>
+                  <div class="email">Email</div>
+                </div>
+                <button class="logout">
+                  <i class="bx bx-log-out"></i> <span>Sair</span>
+                </button>
+              </div>
+              <div class="unloged">
+                <a href="login.html">Logar</a>
+              </div>
+            </div>
+          </div>
+          <i class="bx bx-menu nav_item"></i>
+        </nav>
+
+        <ul class="menu">
+          <li>
+            <a href="index.html">Inicio</a>
+          </li>
+          <li>
+            <a href="store.html">Loja</a>
+          </li>
+          <li>
+            <a href="user.html">Perfil</a>
+          </li>
+          <li class="dashboard-link">
+            <a href="./admin/index.html">Dashboard</a>
+          </li>
+        </ul>
+      </div>
+    </header>
+
+    <section id="user-header" class="profile">
+      <div class="form-wrapper">
+        <div class="left">
+          <img src="./images/e-store.jpg" alt="" />
+        </div>
+
+        <div class="right">
+          <div class="username">Erlenio Simbine</div>
+
+          <div class="email">erleniorodriguesim@gmail.com</div>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <input type="radio" name="tab" id="carrinho" />
+      <input type="radio" name="tab" id="pedidos" checked />
+      <div class="tab">
+        <label class="tab-item" for="carrinho"
+          ><span>Carrinho</span> <span class="count">99+</span></label
+        >
+
+        <label class="tab-item" for="pedidos"
+          ><span>Pedidos</span> <span class="count">10</span></label
+        >
+        <div class="tab-indicator"></div>
+      </div>
+
+      <div class="tab-content">
+        <div class="tb-carrinho">
+          <!--<div class="cart-item">
+            <div class="left">
+              <img src="./images/e-store.jpg">
+            <div class="center">
+              <div class="item-name">Dell XPS 13</div>
+              
+              <div class="quantity">
+                <span class="item-price">49,000 Mzn</spna> <span class="x">x</span> <input type="number" max="5" min="1" value="1" class="quantity-value">
+              </div>
+            </div>
+            </div>
+            <div class="action">
+              <i class="bx bx-x"></i>
+              <input type="checkbox" name="check" id="check">
+            </div>
+          </div>
+
+          <div class="cart-item">
+            <div class="left">
+              <img src="./images/e-store.jpg">
+            <div class="center">
+              <div class="item-name">Dell XPS 13</div>
+              
+              <div class="quantity">
+                <span class="item-price">49,000 Mzn</spna> <span class="x">x</span> <input type="number" max="5" min="1" value="1" class="quantity-value">
+              </div>
+            </div>
+            </div>
+            <div class="action">
+              <i class="bx bx-x"></i>
+              <input type="checkbox" name="check" id="check">
+            </div>
+          </div>-->
+        </div>
+
+        <div class="tb-pedidos">
+
+          
+
+          <!--<div class="request-item">
+            <div class="date">20/05/2023 10:07</div>
+            <div class="items">
+              <div class="item">
+                <div class="left">
+                  <span class="item-name">Dell xps 13</span>  x <item-quantity>4</item-quantity>
+                </div> 
+                <div class="price">200,000 Mzn</div>
+              </div>
+
+              <div class="item">
+                <div class="left">
+                  <span class="item-name">Cnon EOS 6D</span>  x <item-quantity>2</item-quantity>
+                </div> 
+                <div class="price">120,000 Mzn</div>
+              </div>
+
+              <div class="item">
+                <div class="left">
+                  <span class="item-name">Dell xps 12</span>  x <item-quantity>4</item-quantity>
+                </div> 
+                <div class="price">200,000 Mzn</div>
+              </div>
+            </div>
+
+            <div class="request-item-footer">
+              <button>Cancelar</button>
+              <div class="total">320,000 Mzn</div>
+            </div>
+
+          </div>-->
+
+          <div class="request-item">
+            <div class="left">
+              <div class="status">
+                <span class="status-indicator"></span>
+                Aberto
+              </div>
+              <div class="short-description">
+                4 produtos
+              </div>
+            </div>
+            <div class="price">
+              347,000 Mzn
+            </div>
+          </div>
+
+          <div class="request-item">
+            <div class="left">
+              <div class="status verificado">
+                <span class="status-indicator"></span>
+                Verificado
+              </div>
+              <div class="short-description">
+                4 produtos
+              </div>
+            </div>
+            <div class="price">
+              347,000 Mzn
+            </div>
+          </div>
+
+          <div class="request-item">
+            <div class="left">
+              <div class="status cancelado">
+                <span class="status-indicator"></span>
+                Cancelado
+              </div>
+              <div class="short-description">
+                4 produtos
+              </div>
+            </div>
+            <div class="price">
+              347,000 Mzn
+            </div>
+          </div>
+
+          <div class="request-item">
+            <div class="left">
+              <div class="status pago">
+                <span class="status-indicator"></span>
+                Cancelado
+              </div>
+              <div class="short-description">
+                4 produtos
+              </div>
+            </div>
+            <div class="price">
+              347,000 Mzn
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <script src="./js/jquery.js"></script>
+    <script src="./js/user.js"></script>
+  </body>
+</html>
